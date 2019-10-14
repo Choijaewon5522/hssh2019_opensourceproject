@@ -17,7 +17,28 @@
 2)연구소가 해결하려는 문제 : (화학실험시간에 산염기 적정곡선을 해석하지 못하여 어려움을 겪고 있는 신정서 학생의 문제를 해결하기 위한 프로젝트입니다.)
 3)연구소의 깃헙 링크 : (https://github.com/jeongseo0503/luxuryproject)
 4)내가 기여한 내용
-(코드, 주석)
+(vNaOH=float(input('NaOH의 부피를 입력해주세요(mL)'))
+a=(k/c)**0.5
+
+def pH(x, cNaOH, c, v, k):
+def pH(x, cNaOH, c, v, k): #입력받은 값들을 기반으로 함숫값 설정
+    acidmmol=c*v
+    l=[]
+    for i in range(len(x)):
+@@ -33,9 +33,9 @@ def pH(x, cNaOH, c, v, k):
+            l.append(answer)
+    return l
+
+def dang(x, cNaOH, c, v, k):
+    answer = 14 + 0.5* np.log10((10**(-14))*(c*v/(v+x))/k)
+    return answer 
+def dang(x, cNaOH, c, v, k): #최종 pH값 도출
+    forpH = 14 + 0.5* np.log10((10**(-14))*(c*v/(v+x))/k)
+    return forpH
+import matplotlib.pyplot as plt 
+get_ipython().run_line_magic('matplotlib', 'inline')
+x1= np.arange(0, vNaOH, 0.001).tolist()
+)
 5)내가 기여한 내용에 대한 설명
 (주석을 달고 일부변수가 다른 함수랑 동일하게 적용되어 코드에 대한 직관성이 떨어지기에 변수이름을 바꾸었다)
 6)내가 기여한 내용의 반영 여부 : (x)
@@ -27,7 +48,53 @@
 2)연구소가 해결하려는 문제 : (가계도 분석에 어려움을 겪고 있는 보현이의 중학교 3학년 동생 짱돌이)
 3)연구소의 깃헙 링크 : (https://github.com/eunjae324/2303-2305)
 4)내가 기여한 내용
-(주석)
+(d = list(input('아버지의 혈액형을 입력하세요 Ex) A :  '))
+if len(d) == 2 :
+    d.append('A')
+    d.append('A')  #AB형일 때
+    d.append('B')
+elif d[0] == 'O' :
+elif d[0] == 'O' :   #O형일 대
+    d.append('O')
+    d.append('O')  
+    d.append('O')
+    d.append('O')
+elif d[0] == 'A' :
+elif d[0] == 'A' :  #A형일 때 
+    dd = input('친할아버지의 혈액형을 입력하세요 :')
+    dm = input('친할머니의 혈액형을 입력하세요 :')
+    if dd == 'B' or dd == 'O' or dm == 'B' or dm == 'O' :
+    if dd == 'B' or dd == 'O' or dm == 'B' or dm == 'O' : #조부모의 유전자형에 따른 아버지의 유전자형 결정
+        d.append('O')
+        d.append('A')
+        d.append('O')
+@@ -22,7 +22,7 @@ elif d[0] == 'A' :
+        d.append('A')
+        d.append('O')
+else :
+    dd = input('친할아버지의 혈액형을 입력하세요 :')
+    dd = input('친할아버지의 혈액형을 입력하세요 :')  #위와 동일한 과정
+    dm = input('친할머니의 혈액형을 입력하세요 :')
+    if dd == 'A' or dd == 'O' or dm == 'A' or dm == 'O' :
+        d.append('O')
+@@ -61,7 +61,7 @@ elif m[0] == 'A' :
+        m.append('A')
+        m.append('O')
+else :
+    md = input('외할아버지의 혈액형을 입력하세요 :')
+    md = input('외할아버지의 혈액형을 입력하세요 :') #아버지의 코드와 동일하게 설정
+    mm = input('외할머니의 혈액형을 입력하세요 :')
+    if md == 'A' or md == 'O' or mm == 'A' or mm == 'O' :
+        m.append('O')
+@@ -88,7 +88,7 @@ for i in range(0,16) :
+    elif son[i] == 'OB' :
+        son[i] = 'BO'
+
+cAB = 6.25 * (son.count('AB'))
+cAB = 6.25 * (son.count('AB'))   #자녀의 혈액형 확률 설정
+cAO = 6.25 * (son.count('AO'))
+cAA = 6.25 * (son.count('AA'))
+cBB = 6.25 * (son.count('BB')))
 5)내가 기여한 내용에 대한 설명
 (코드에 대한 주석을 추가해 수정하려는 사람들이 보다 쉽게 이해할 수 있도록 했다)
 6)내가 기여한 내용의 반영 여부 : (X)
